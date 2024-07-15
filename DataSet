@@ -1,0 +1,34 @@
+Exercise Pose Estimation Dataset
+This repository contains code to create a dataset from video files by extracting key points using MediaPipe Pose estimation. The dataset includes key points from multiple videos, labeled with the exercise type as "unknown". This dataset can be used for further processing, training, or exercise classification tasks.
+
+Dataset Description
+The dataset consists of key points extracted from video frames using MediaPipe Pose estimation. The key points include coordinates of various body parts such as wrists, elbows, shoulders, hips, knees, and ankles. Each frame's key points are labeled with the exercise type "unknown".
+
+Key Points
+The extracted key points for each frame include:
+
+wrist_left_x, wrist_left_y: Coordinates of the left wrist
+wrist_right_x, wrist_right_y: Coordinates of the right wrist
+elbow_left_x, elbow_left_y: Coordinates of the left elbow
+elbow_right_x, elbow_right_y: Coordinates of the right elbow
+shoulder_left_x, shoulder_left_y: Coordinates of the left shoulder
+shoulder_right_x, shoulder_right_y: Coordinates of the right shoulder
+hip_left_x, hip_left_y: Coordinates of the left hip
+hip_right_x, hip_right_y: Coordinates of the right hip
+knee_left_x, knee_left_y: Coordinates of the left knee
+knee_right_x, knee_right_y: Coordinates of the right knee
+ankle_left_x, ankle_left_y: Coordinates of the left ankle
+ankle_right_x, ankle_right_y: Coordinates of the right ankle
+Each entry also contains a label Exercise which is set to "unknown".
+
+Usage
+Data Extraction: The provided code processes multiple videos, extracts pose estimation key points, and saves them into a CSV file.
+Dataset Creation: Run the script to generate a combined dataset from the specified videos.
+Further Processing: Use the dataset for training machine learning models or other analyses.
+Example
+The dataset CSV file will have the following structure:
+
+sql
+Copy code
+wrist_left_x, wrist_left_y, wrist_right_x, wrist_right_y, elbow_left_x, elbow_left_y, elbow_right_x, elbow_right_y, shoulder_left_x, shoulder_left_y, shoulder_right_x, shoulder_right_y, hip_left_x, hip_left_y, hip_right_x, hip_right_y, knee_left_x, knee_left_y, knee_right_x, knee_right_y, ankle_left_x, ankle_left_y, ankle_right_x, ankle_right_y, Exercise
+0.5, 0.5, 0.6, 0.5, ..., unknown
